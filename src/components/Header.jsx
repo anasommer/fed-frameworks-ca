@@ -11,7 +11,7 @@ export default function Header() {
   return (
     <header>
       <Link className='site-logo' to='/'>
-        eCom Store
+        e-Com Store
       </Link>
       <nav>
         <NavLink
