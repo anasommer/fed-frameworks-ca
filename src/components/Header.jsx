@@ -13,10 +13,22 @@ export default function Header() {
         eCom Store
       </Link>
       <nav>
-        <NavLink to='/'>Home</NavLink>
-
-        <NavLink to='/contact'>Contact</NavLink>
-        <NavLink to='/cart'>
+        <NavLink
+          to='/'
+          style={({ isActive }) => (isActive ? activeStyles : null)}
+        >
+          Home
+        </NavLink>
+        <NavLink
+          to='/contact'
+          style={({ isActive }) => (isActive ? activeStyles : null)}
+        >
+          Contact
+        </NavLink>
+        <NavLink
+          to='/cart'
+          style={({ isActive }) => (isActive ? activeStyles : null)}
+        >
           <img src='/src/assets/images/cart.svg' alt='' className='cart-icon' />
         </NavLink>
       </nav>
