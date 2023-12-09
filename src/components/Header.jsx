@@ -1,10 +1,11 @@
 import { Link, NavLink } from 'react-router-dom';
+import CartIcon from './CartIcon';
 
 export default function Header() {
   const activeStyles = {
     fontWeight: 'bold',
     textDecoration: 'underline',
-    color: '#161616',
+    color: '#9E1416',
   };
 
   return (
@@ -25,12 +26,8 @@ export default function Header() {
         >
           Contact
         </NavLink>
-        <NavLink
-          to='/cart'
-          style={({ isActive }) => (isActive ? activeStyles : null)}
-        >
-          <img src='/src/assets/images/cart.svg' alt='' className='cart-icon' />
-        </NavLink>
+
+        <CartIcon />
       </nav>
     </header>
   );
