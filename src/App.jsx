@@ -8,13 +8,13 @@ import NotFound from './components/NotFound';
 function App() {
   return (
     <>
-      <Layout />
-
       <Routes>
-        <Route index element={<Home />} />
-        <Route path='contact' element={<ContactPage />} />
-        <Route path='cart' element={<CheckOutPage />} />
-        <Route path='*' element={<NotFound />} />
+        <Route path='/' element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path='contact' element={<ContactPage />} />
+          <Route path='cart' element={<CheckOutPage />} />
+          <Route path='*' element={<NotFound />} />{' '}
+        </Route>
       </Routes>
     </>
   );
