@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  text-align: center;
+  margin: 0 auto;
 }
 
 html,
@@ -11,7 +13,6 @@ body {
 }
 
 a {
-  text-decoration: unset;
   color: unset;
 }
 
@@ -22,8 +23,6 @@ body::-webkit-scrollbar {
 body {
   -ms-overflow-style: none;
   scrollbar-width: none;
-  max-width: 800px;
-  margin: 0 auto;
 }
 
 .site-wrapper {

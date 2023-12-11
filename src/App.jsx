@@ -3,6 +3,7 @@ import Home from './components/Home';
 import ContactPage from './pages/ContactPage';
 import Layout from './components/Layout';
 import CheckOutPage from './pages/CheckoutPage';
+import NotFound from './components/NotFound';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path='contact' element={<ContactPage />} />
         <Route path='cart' element={<CheckOutPage />} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
     </>
   );
