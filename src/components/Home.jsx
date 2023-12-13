@@ -14,7 +14,7 @@ export default function Home() {
 
         const response = await fetch(apiUrl);
         const data = await response.json();
-        console.log(data);
+
         setProducts(data);
       } catch (error) {
         setIsError(error.message);
@@ -30,28 +30,21 @@ export default function Home() {
     <div key={product.id} className='product-tile'>
       <Link to={`/product/${product.id}`}>
         <img src={product.imageUrl} alt='' />
+        <div className='product-info'>
+          <h3>{product.title}</h3>
+          <p>
+            $
+            {product.discountedPrice !== product.price
+              ? `${product.discountedPrice} (-${
+                  product.price - product.discountedPrice
+                }$)`
+              : product.price}
+          </p>
+        </div>
+        <button className='link-button'>View product</button>
       </Link>
-      <div className='product-info'>
-        <h3>{product.title}</h3>
-        <p>
-          $
-          {product.discountedPrice !== product.price
-            ? `${product.discountedPrice} (-${
-                product.price - product.discountedPrice
-              }$)`
-            : product.price}
-        </p>
-      </div>
-
-      <button className='link-button' onClick={() => viewProduct(product.id)}>
-        View product
-      </button>
     </div>
   ));
-
-  function viewProduct(id) {
-    window.location.href = `/product/${id}`;
-  }
 
   return (
     <div>
