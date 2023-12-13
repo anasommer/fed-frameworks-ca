@@ -14,7 +14,7 @@ export default function Home() {
 
         const response = await fetch(apiUrl);
         const data = await response.json();
-
+        console.log(data);
         setProducts(data);
       } catch (error) {
         setIsError(error.message);
@@ -33,7 +33,14 @@ export default function Home() {
       </Link>
       <div className='product-info'>
         <h3>{product.title}</h3>
-        <p>${product.price}</p>
+        <p>
+          $
+          {product.discountedPrice !== product.price
+            ? `${product.discountedPrice} (-${
+                product.price - product.discountedPrice
+              }$)`
+            : product.price}
+        </p>
       </div>
 
       <button className='link-button' onClick={() => viewProduct(product.id)}>
