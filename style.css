@@ -71,6 +71,11 @@ header .cart-icon {
     contrast(84%);
 }
 
+.item-price {
+  color: #9e1416;
+  font-weight: 600;
+}
+
 .items-counter {
   position: relative;
   z-index: 2;

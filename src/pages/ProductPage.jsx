@@ -39,7 +39,7 @@ export default function ProductPage() {
           />
           <h2>{item.title}</h2>
           <p className='item-desc'>{item.description}</p>
-          <p>
+          <p className='item-price'>
             $
             {item.discountedPrice !== item.price
               ? `${item.discountedPrice} (-${Math.ceil(
@@ -48,7 +48,7 @@ export default function ProductPage() {
               : item.price}
           </p>
           <button className='link-button'>Add to cart</button>
-          {item.reviews.length > 1 && <h3>Reviews:</h3>}
+          {item.reviews.length >= 1 && <h3>Reviews:</h3>}
           <div key={item.reviews.id}>
             {item.reviews
               ? item.reviews.map((review) => (

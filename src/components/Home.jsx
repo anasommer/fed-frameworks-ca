@@ -32,7 +32,7 @@ export default function Home() {
         <img src={product.imageUrl} alt='' />
         <div className='product-info'>
           <h3>{product.title}</h3>
-          <p>
+          <p className='item-price'>
             $
             {product.discountedPrice !== product.price
               ? `${product.discountedPrice} (-${Math.ceil(
