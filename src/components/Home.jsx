@@ -35,9 +35,9 @@ export default function Home() {
           <p>
             $
             {product.discountedPrice !== product.price
-              ? `${product.discountedPrice} (-${
+              ? `${product.discountedPrice} (-${Math.ceil(
                   product.price - product.discountedPrice
-                }$)`
+                )}$)`
               : product.price}
           </p>
         </div>
