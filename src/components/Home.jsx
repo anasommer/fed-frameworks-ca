@@ -1,4 +1,4 @@
-import { apiUrl } from '../constants/api';
+import { apiUrl } from '../api/apiUrl';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 

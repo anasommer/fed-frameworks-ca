@@ -145,8 +145,38 @@ main {
   text-transform: uppercase;
   cursor: pointer;
   transition: transform 0.1s ease-in-out;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 30px;
+}
+
+/* INDIVIDUAL PRODUCT PAGE */
+.item-detail-container {
+  padding-inline: 27px;
+}
+
+.item-desc {
+  max-width: 50%;
+  margin: 20px auto;
+}
+
+.item-img {
+  max-width: 50%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.item-review {
+  margin: 10px auto;
+  max-width: 50%;
+}
+
+.item-review h4 {
+  text-align: left;
+}
+
+.item-review p {
+  font-style: italic;
+  margin-top: 10px;
 }
 
 footer {
@@ -192,6 +222,7 @@ footer {
 
 .home-container h1 {
   font-weight: 700;
+
   font-size: 2.25rem;
   line-height: 42px;
 }
@@ -337,9 +368,7 @@ i[class*='van-type-'] {
   padding: 7px 14px;
 }
 
-.van-detail-container {
-  padding-inline: 27px;
-}
+
 
 .van-detail-container .back-button {
   color: black;
