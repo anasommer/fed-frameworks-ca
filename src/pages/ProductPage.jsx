@@ -1,6 +1,8 @@
 import { useParams } from 'react-router-dom';
 import { apiUrl } from '../api/apiUrl';
 import { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 export default function ProductPage() {
   const params = useParams();
@@ -25,6 +27,16 @@ export default function ProductPage() {
 
     getItem(params.id);
   }, [params.id]);
+
+  const star = <FontAwesomeIcon icon={faStar} className='star-icon' />;
+
+  function renderStars(number) {
+    let stars = [];
+    for (let i = 0; i < number; i++) {
+      stars.push(star);
+    }
+    return stars;
+  }
 
   return (
     <>
@@ -54,7 +66,8 @@ export default function ProductPage() {
               ? item.reviews.map((review) => (
                   <div className='item-review' key={review.id}>
                     <h4>{review.username} wrote:</h4>
-                    <p>&apos; {review.description} &apos;</p>
+                    <p>{review.description}</p>
+                    {renderStars(review.rating)}
                   </div>
                 ))
               : ''}

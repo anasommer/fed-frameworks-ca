@@ -171,8 +171,11 @@ main {
 }
 
 .item-review {
-  margin: 10px auto;
+  margin: 10px auto 20px;
   max-width: 50%;
+  background-color: #eff3cda3;
+  border-radius: 10px;
+  padding: 20px;
 }
 
 .item-review h4 {
@@ -181,6 +184,11 @@ main {
 
 .item-review p {
   font-style: italic;
+  margin-top: 10px;
+}
+
+.star-icon {
+  color: #c80c44;
   margin-top: 10px;
 }
 
