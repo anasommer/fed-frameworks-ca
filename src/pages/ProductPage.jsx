@@ -1,8 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { apiUrl } from '../api/apiUrl';
 import { useEffect, useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import StarRating from '../components/StarRating';
 
 export default function ProductPage() {
   const params = useParams();
@@ -28,20 +27,11 @@ export default function ProductPage() {
     getItem(params.id);
   }, [params.id]);
 
-  const star = <FontAwesomeIcon icon={faStar} className='star-icon' />;
-
-  function renderStars(number) {
-    let stars = [];
-    for (let i = 0; i < number; i++) {
-      stars.push(star);
-    }
-    return stars;
-  }
-
   return (
     <>
       {isLoading && <div>Loading products...</div>}
       {isError && <div>{isError}</div>}
+
       {item ? (
         <div className='item-detail-container' key={item.id}>
           <img
@@ -61,17 +51,16 @@ export default function ProductPage() {
           </p>
           <button className='link-button'>Add to cart</button>
           {item.reviews.length >= 1 && <h3>Reviews:</h3>}
-          <div key={item.reviews.id}>
-            {item.reviews
-              ? item.reviews.map((review) => (
-                  <div className='item-review' key={review.id}>
-                    <h4>{review.username} wrote:</h4>
-                    <p>{review.description}</p>
-                    {renderStars(review.rating)}
-                  </div>
-                ))
-              : ''}
-          </div>
+
+          {item.reviews
+            ? item.reviews.map((review) => (
+                <div className='item-review' key={review.id}>
+                  <h4>{review.username} wrote:</h4>
+                  <p>{review.description}</p>
+                  <StarRating rating={review.rating} />
+                </div>
+              ))
+            : null}
         </div>
       ) : (
         <h2>Loading...</h2>
