@@ -257,6 +257,8 @@ main {
 
 .contact-form-error {
   color: red;
+  display: block;
+  margin-bottom: 15px;
 }
 
 footer {
