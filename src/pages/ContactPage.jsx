@@ -20,8 +20,6 @@ export default function ContactPage() {
     resolver: yupResolver(schema),
   });
 
-  console.log(errors);
-
   function onSubmit(data) {
     console.log(data);
   }
@@ -32,41 +30,22 @@ export default function ContactPage() {
       <form onSubmit={handleSubmit(onSubmit)} className='contact-form'>
         <label>
           Full Name <br />
-          <input
-            type='text'
-            name='name'
-            placeholder='Full Name'
-            {...register('name')}
-          />
+          <input type='text' placeholder='Full Name' {...register('name')} />
           <span className='contact-form-error'>{errors.name?.message}</span>
         </label>
         <label>
           Subject <br />
-          <input
-            type='text'
-            name='subject'
-            placeholder='Subject'
-            {...register('subject')}
-          />
+          <input type='text' placeholder='Subject' {...register('subject')} />
           <span className='contact-form-error'>{errors.subject?.message}</span>
         </label>
         <label>
           Email <br />
-          <input
-            type='email'
-            name='email'
-            placeholder='E-mail'
-            {...register('email')}
-          />
+          <input type='email' placeholder='E-mail' {...register('email')} />
           <span className='contact-form-error'>{errors.email?.message}</span>
         </label>
         <label>
           Message <br />
-          <textarea
-            placeholder='Message'
-            name='message'
-            {...register('message')}
-          />
+          <textarea placeholder='Message' {...register('message')} />
           <span className='contact-form-error'>{errors.message?.message}</span>
         </label>
 
