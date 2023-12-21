@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { useState } from 'react';
+import useStore from '../store/cart';
 
 export default function CartIcon() {
   const activeStyles = {
@@ -7,7 +7,9 @@ export default function CartIcon() {
       'invert(8%) sepia(82%) saturate(6462%) hue-rotate(1deg) brightness(99%) contrast(84%)',
   };
 
-  const [cartItemsCount, setCartItemsCount] = useState(2);
+  const { cart } = useStore();
+
+  const totalQuantity = cart.reduce((acc, item) => acc + item.quantity, 0);
 
   return (
     <>
@@ -21,8 +23,8 @@ export default function CartIcon() {
           className='cart-icon'
         />
       </NavLink>
-      {cartItemsCount && (
-        <span className='items-counter'>{cartItemsCount}</span>
+      {totalQuantity > 0 && (
+        <span className='items-counter'>{totalQuantity}</span>
       )}
     </>
   );

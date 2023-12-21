@@ -16,7 +16,7 @@ export default function CheckOutPage() {
               <button onClick={() => removeFromCart(item.id)}>Remove</button>
             </li>
           ))}
-          <button onClick={clearCart}>Clear Cart</button>
+          {cart.length > 0 && <button onClick={clearCart}>Clear Cart</button>}
         </ul>
       </div>
       <Link to={`/checkoutSuccess`}>
