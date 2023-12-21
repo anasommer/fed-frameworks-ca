@@ -5,6 +5,7 @@ import Layout from './components/Layout';
 import CheckOutPage from './pages/CheckoutPage';
 import NotFound from './components/NotFound';
 import ProductPage from './pages/ProductPage';
+import CheckoutSuccessPage from './pages/CheckoutSuccessPage';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path='cart' element={<CheckOutPage />} />
           <Route path='*' element={<NotFound />} />{' '}
           <Route path='/product/:id' element={<ProductPage />} />
+          <Route path='/checkoutSuccess' element={<CheckoutSuccessPage />} />
         </Route>
       </Routes>
     </>
