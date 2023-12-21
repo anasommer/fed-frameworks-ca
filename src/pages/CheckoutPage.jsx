@@ -20,7 +20,9 @@ export default function CheckOutPage() {
         </ul>
       </div>
       <Link to={`/checkoutSuccess`}>
-        <button className='link-button'>Checkout</button>
+        <button className='link-button' onClick={clearCart}>
+          Checkout
+        </button>
       </Link>
     </div>
   );
