@@ -2,8 +2,20 @@ import { useParams } from 'react-router-dom';
 import { apiUrl } from '../api/apiUrl';
 import { useEffect, useState } from 'react';
 import StarRating from '../components/StarRating';
+import useStore from '../store/cart';
 
 export default function ProductPage() {
+  const { addToCart } = useStore();
+
+  const handleAddToCart = (item) => {
+    const newItem = {
+      id: item.id,
+      name: item.title,
+      price: item.price,
+    };
+    addToCart(newItem);
+  };
+
   const params = useParams();
 
   const [item, setItem] = useState(null);
@@ -49,7 +61,9 @@ export default function ProductPage() {
                 )}$)`
               : item.price}
           </p>
-          <button className='link-button'>Add to cart</button>
+          <button className='link-button' onClick={() => handleAddToCart(item)}>
+            Add to cart
+          </button>
           {item.reviews.length >= 1 && <h3>Reviews:</h3>}
 
           {item.reviews
