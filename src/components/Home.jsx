@@ -6,6 +6,7 @@ export default function Home() {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(null);
+  const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
     async function getProducts() {
@@ -26,7 +27,11 @@ export default function Home() {
     getProducts();
   }, []);
 
-  const productsEl = products.map((product) => (
+  const filteredProducts = products.filter((product) =>
+    product.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  const productsEl = filteredProducts.map((product) => (
     <div key={product.id} className='product-tile'>
       <Link to={`/product/${product.id}`}>
         <img src={product.imageUrl} alt='' />
@@ -53,7 +58,20 @@ export default function Home() {
       {products && (
         <div className='product-list-container'>
           <h1>Explore our products</h1>
-          <div className='product-list'>{productsEl}</div>
+          <input
+            type='text'
+            placeholder='Search products...'
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+
+          {filteredProducts.length > 0 ? (
+            <div className='product-list'>{productsEl}</div>
+          ) : (
+            <div className='no-products-container'>
+              <div className='no-products-message'>No products found.</div>
+            </div>
+          )}
         </div>
       )}
     </div>

@@ -154,6 +154,16 @@ main {
   margin-bottom: 30px;
 }
 
+/* SEARCH */
+.no-products-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 200px;
+  width: 100%;
+}
+
 /* INDIVIDUAL PRODUCT PAGE */
 .item-detail-container {
   padding-inline: 27px;
@@ -209,7 +219,8 @@ main {
 }
 
 .contact-form > label input,
-.contact-form > label textarea {
+.contact-form > label textarea,
+input {
   border: 1px solid rgba(209, 213, 219);
   height: 40px;
   text-indent: 10px;
@@ -224,11 +235,13 @@ main {
   height: 200px;
 }
 
-.contact-form > input:focus {
+.contact-form > input:focus,
+input {
   outline: none;
 }
 
-.contact-form > input:first-of-type {
+.contact-form > input:first-of-type,
+input {
   border-radius: 6px 6px 0px 0px;
 }
 
