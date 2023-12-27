@@ -58,4 +58,4 @@ A step-by-step series of examples that tell you how to get a development environ
 
 ## Author
 
-- **[Anastassia Sommer]** - _Initial work_ - [anasommer](https://github.com/anasommer)
+- **[Anastassia Sommer]** - [anasommer](https://github.com/anasommer)
