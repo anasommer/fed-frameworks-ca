@@ -18,7 +18,7 @@ export default function CartIcon() {
         style={({ isActive }) => (isActive ? activeStyles : null)}
       >
         <img
-          src='/src/assets/images/cart.svg'
+          src='/assets/images/cart.svg'
           alt='shopping cart icon'
           className='cart-icon'
         />
