@@ -12,6 +12,7 @@ export default function ProductPage() {
       id: item.id,
       name: item.title,
       price: item.price,
+      img: item.imageUrl,
     };
     addToCart(newItem);
   };
