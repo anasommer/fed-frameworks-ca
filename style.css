@@ -377,3 +377,9 @@ ul {
 .add-item-button {
   background-color: #14a61d;
 }
+
+@media screen and (max-width: 600px) {
+  .product-list {
+    grid-template-columns: 1fr;
+  }
+}
