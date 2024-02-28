@@ -1,4 +1,6 @@
-# NorOff Front End Frameworks React Project
+# NorOff JavaScript Frameworks Course Assignment | Front-End Development 2 year
+
+![image](https://anasommer.com/images/projects/ecom-store.jpeg)
 
 ## Project Overview
 
@@ -14,48 +16,42 @@ This repository contains the NorOff Front End Frameworks project, built using Re
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-### Prerequisites
+## Built With
 
-What you need to install the software:
+- HTML
+- CSS
+- [React](https://reactjs.org/) - The web framework used
+- [Vite](https://vitejs.dev/) - Frontend build tool for faster development
+- [NorOff API](https://docs.noroff.dev/)
 
-- [Node.js](https://nodejs.org/)
-- [npm](https://www.npmjs.com/) (usually comes with Node.js)
+## Getting Started
 
 ### Installing
 
-A step-by-step series of examples that tell you how to get a development environment running:
+1. Clone the repo:
 
-1. **Clone the Repository**:
+```bash
+git clone git@github.com:anasommer/fed-frameworks-ca.git
+```
 
-   ```bash
-   git clone https://github.com/anasommer/fed-frameworks-ca.git
-   ```
+2. Install the dependencies:
 
-2. **Navigate to the Project Directory**:
+```
+npm install
+```
 
-   ```bash
-   cd fed-frameworks-ca
-   ```
+### Running
 
-3. **Install Dependencies**:
+To run the app, run the following commands:
 
-   ```bash
-   npm install
-   ```
+```bash
+npm run start
+```
 
-4. **Run the Application**:
+This runs the app in development mode, powered by Vite. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-   ```bash
-   npm start
-   ```
+## Contact
 
-   This runs the app in development mode, powered by Vite. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[My Portolio Page](https://www.anasommer.com/)
 
-## Built With
-
-- [React](https://reactjs.org/) - The web framework used
-- [Vite](https://vitejs.dev/) - Frontend build tool for faster development
-
-## Author
-
-- **[Anastassia Sommer]** - [anasommer](https://github.com/anasommer)
+[My LinkedIn Page](https://www.linkedin.com/in/anastassia-sommer-146409235/)
