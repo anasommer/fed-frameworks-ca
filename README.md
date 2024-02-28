@@ -12,10 +12,6 @@ This repository contains the NorOff Front End Frameworks project, built using Re
 - **Responsive Design**: Ensures a seamless experience across various devices and screen sizes.
 - **State Management**: Efficiently handles application state, demonstrating React's capabilities in dynamic content manipulation.
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
-
 ## Built With
 
 - HTML
@@ -25,6 +21,8 @@ These instructions will get you a copy of the project up and running on your loc
 - [NorOff API](https://docs.noroff.dev/)
 
 ## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Installing
 
