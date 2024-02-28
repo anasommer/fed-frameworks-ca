@@ -54,5 +54,5 @@ This runs the app in development mode, powered by Vite. Open [http://localhost:3
 
 [My LinkedIn Page](https://www.linkedin.com/in/anastassia-sommer-146409235/)
 
-[Live on Netlify]([https://playful-paletas-69e26c.netlify.app/](https://wondrous-daifuku-86d40f.netlify.app/)https://wondrous-daifuku-86d40f.netlify.app/)
+[Live on Netlify](https://wondrous-daifuku-86d40f.netlify.app/)
 
