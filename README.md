@@ -1,4 +1,4 @@
-# NorOff JavaScript Frameworks Course Assignment | Front-End Development 2 year
+# NorOff JavaScript Frameworks Course Assignment | Front-End Development 2nd year
 
 ![image](https://anasommer.com/images/projects/ecom-store.jpeg)
 
