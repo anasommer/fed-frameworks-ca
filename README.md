@@ -2,7 +2,7 @@
 
 ![image](https://anasommer.com/images/projects/ecom-store.jpeg)
 
-## Project Overview
+## Description
 
 This repository contains the NorOff Front End Frameworks project, built using React with Vite. It's designed as a showcase of React development skills, leveraging the fast build tool Vite for an optimized development experience. The project demonstrates component-based architecture, state management, and responsive design.
 
